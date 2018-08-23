@@ -7,7 +7,33 @@ import comidas.*
  */
  
 object pepita {
-	var energia
+	var energia= 0
 	method energia() { return energia }
 	method comer(cosa, gramos) { energia += cosa.energiaPorGramo() * gramos }
+	method visitar(lugar) {energia+=lugar.energiaRevitalizadora()}
 }
+
+object mdq {
+	var esTemporadaAlta=true
+	method comenzarTemporadaAlta() {esTemporadaAlta=true}
+	method finalizarTemporadaAlta() {esTemporadaAlta=false}
+	method energiaRevitalizadora(){return if (esTemporadaAlta){-20} else {80} }
+	}
+	
+object noroeste {
+	method energiaRevitalizadora() {return pepita.energia() * 0.1}
+	
+}
+	
+	
+	
+	
+	
+
+
+
+
+
+	
+	
+	
